@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('body')
 <h1 class="text-center m-4">Data Pasien</h1>
-<form action="#" method="POST">
+<form action="/edit/{{ $pasien->id }}" method="POST">
   @csrf
   <div class="row mb-3">
     <label for="nama" class="col-sm-2 col-form-label">Nama Pasien</label>
@@ -40,7 +40,7 @@
     </div>
   </div>
   
-  <button type="submit" class="btn btn-primary">Tambah</button>
+  <button type="submit" class="btn btn-primary">Edit Data</button>
 </form>
 <a href="/" class="btn btn-success mt-4">Kembali</a>
 @endsection
